@@ -1,8 +1,25 @@
-import animateTitle from './features/animateTitle'
-import createBadge from './features/createBasge'
-import './styles/style.css'
+import Lenis from 'lenis'
 
-console.log('Welcome to Vite + JS + Webflow!')
+import home from './pages/home/home'
+import homeScroll from './pages/home/home-scroll'
+import pixelImage from './pages/home/pixelImage'
 
-createBadge()
-animateTitle()
+function scroll() {
+  const lenis = new Lenis()
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+}
+
+scroll()
+
+const isHome = document.querySelector('body').classList.contains('body--home')
+if (isHome) {
+  home()
+  homeScroll()
+  pixelImage()
+}
