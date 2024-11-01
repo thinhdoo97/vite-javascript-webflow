@@ -1,6 +1,5 @@
 import Lenis from 'lenis'
 
-import home from './pages/home/home'
 import homeScroll from './pages/home/home-scroll'
 import pixelImage from './pages/home/pixelImage'
 
@@ -19,7 +18,6 @@ scroll()
 
 const isHome = document.querySelector('body').classList.contains('body--home')
 if (isHome) {
-  home()
   homeScroll()
   pixelImage()
 }
