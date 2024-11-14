@@ -4,7 +4,7 @@ import gsap from 'gsap'
 function pixelImage() {
   document.addEventListener('DOMContentLoaded', function () {
     const animationStepDuration = 0.3
-    const gridSize = 10
+    const gridSize = 20
 
     const cards = document.querySelectorAll('[data-pixelated-image-reveal]')
 
